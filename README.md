@@ -1,28 +1,56 @@
-# payGo : Incentive Comparable Payment Routingbased on Contract theory
+# **payGo: Incentive-Comparable Payment Routing Based on Contract Theory**
 
-Payment Channel Networks (PCN) emerges as a most promising offchain solution for the crypto-currencies which offloads transactions from the blockchain and handles them directly using a payment channel with minimum involvement of the blockchain. A routing protocol  for the PCN is critical to find a Path-Based Transaction (PBT) path with low latency and high throughput and several routing protocols  have been proposed for issues of decentralization, concurrency and privacy. However, an incentive mechanism for the Payment Service Provider (PSP) has not been sufficiently studied, which is a key to a successful  PBT.  
+PayGo is an innovative routing protocol for **Payment Channel Networks (PCN)** that applies **contract theory** to optimize incentives and performance. It addresses the limitations of existing PCN routing protocols by introducing a mechanism to ensure low latency, high throughput, and fair incentives for Payment Service Providers (PSPs).  
 
-PayGo routing protocol not only discovers a feasible path, but derives optimal incentive for the PSPs using contract theory. Furthermore, the payGo makes the PSP have a contract with a counterparty to grantee payment latency and throughput with penalty. We implement the payGo protocol extending Raiden network. 
+## **Key Features**
+- **Incentive Mechanism**: Leverages contract theory to derive optimal incentives for PSPs.  
+- **Latency and Throughput Guarantees**: Ensures payment latency and throughput with a penalty-based smart contract mechanism.  
+- **Blockchain Integration**: Implements the protocol by extending the **Raiden Network**, an Ethereum-based payment channel network.  
 
-Paper : https://ieeexplore.ieee.org/abstract/document/9057681
+For detailed insights, refer to the published paper:  
+[**IEEE Access: PayGo - Incentive-Comparable Payment Routing Based on Contract Theory**](https://ieeexplore.ieee.org/abstract/document/9057681)
 
-This git repo provides a implementation of PCN. and (simulation.py) implements a P2P topology.  
+---
 
-<img src="https://user-images.githubusercontent.com/35050199/78328119-572a2200-75b9-11ea-8060-431963dd0821.png" width="30%"></img>
+## **Repository Contents**
 
-# Contents
-<ul>
-  <li>algorithm.py : Implementation the contract theory</li>
-  <li>contract.py : Interconnecting with blockchain</li>
-  <li>key.py : Account for blockchain</li>
-  <li>channelState.py : State of the two nodes participating in the payemnt channel</li>
-  <li>message.py : PayGo message structure</li>
-  <li>node.py : Implementation the payGo routing protocol</li>
-  <li>settingParameter.py : Parameter used for simulation</li>
-  <li>structure.py : simulation result and pending payment structure</li>
-</ul>
+This repository provides an implementation of the **PayGo protocol** and includes simulations for a P2P topology.  
 
+### **Files and Descriptions**
+| **File**               | **Description**                                                                 |
+|------------------------|-------------------------------------------------------------------------------|  
+| `algorithm.py`         | Implements the incentive mechanism using contract theory.                     |  
+| `contract.py`          | Interconnects with the blockchain network.                                    |  
+| `key.py`               | Manages blockchain accounts for nodes.                                       |  
+| `channelState.py`      | Tracks the state of two nodes participating in the payment channel.            |  
+| `message.py`           | Defines the structure of PayGo protocol messages.                             |  
+| `node.py`              | Implements the PayGo routing protocol logic.                                  |  
+| `settingParameter.py`  | Contains parameters for simulation configuration.                              |  
+| `structure.py`         | Manages simulation results and pending payment structures.                    |  
 
+---
 
+## **System Overview**
+The PayGo protocol introduces an incentive-compatible routing mechanism by combining:  
+1. **Contract Creation**: Each PSP generates a contract bundle, ensuring optimal rewards for latency and throughput.  
+2. **Smart Contract Enforcement**: Penalty clauses are enforced through Ethereum-based smart contracts.  
+3. **Simulation Environment**: Implements and evaluates the protocol in a P2P topology.  
 
+Below is a high-level overview of the system architecture:
 
+<img src="https://user-images.githubusercontent.com/35050199/78328119-572a2200-75b9-11ea-8060-431963dd0821.png" width="40%"></img>
+
+---
+
+## **How to Run the Project**
+
+### **1. Prerequisites**
+- Python 3.x installed.  
+- Access to an Ethereum-based blockchain environment (e.g., Ganache).  
+- Dependencies listed in `requirements.txt`.
+
+### **2. Setup Instructions**
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/your-repo-link.git
+   cd payGo
