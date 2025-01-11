@@ -53,4 +53,13 @@ Below is a high-level overview of the system architecture:
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-repo-link.git
-   cd payGo
+   cd payGo```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Run the simulation:
+```
+bash
+python simulation.py
+```
