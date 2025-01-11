@@ -61,5 +61,6 @@ pip install -r requirements.txt
 3. Run the simulation:
 ```
 bash
+cd set
 python simulation.py
 ```
